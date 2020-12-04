@@ -1,0 +1,28 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#navBar {
+	width: 100vw;
+	height: 8vh;
+	background-color: cadetblue;
+	margin-bottom: 30px;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#title {
+	text-align: center;
+}
+#pic {
+	display: block;
+	margin: auto;
+}
+#description {
+	text-align: center;
+	margin-top: 5vh;
+	font-size: larger;
+}
