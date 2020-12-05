@@ -1,6 +1,6 @@
-const elementFactory = function (name, elmnt, container, id, cls, txt, sorc) {
+const elementFactory = function (elmnt, container, id, cls, txt, sorc) {
+	const name = document.createElement(`${elmnt}`);
 	const displayElement = function () {
-		name = document.createElement(`${elmnt}`);
 		if (txt) {
 			name.textContent = `${txt}`;
 		}
@@ -16,7 +16,7 @@ const elementFactory = function (name, elmnt, container, id, cls, txt, sorc) {
 		container.appendChild(name);
 	};
 
-	return { displayElement };
+	return { displayElement, name };
 };
 
 export { elementFactory };
