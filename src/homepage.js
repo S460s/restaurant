@@ -2,14 +2,14 @@ import { elementFactory } from "./elementFactory";
 
 const homepage = (function () {
 	const content = document.getElementById("content");
-	const title = elementFactory("h1", content, "title", "", "TOP Restaurant");
+	const title = elementFactory("h1", content, "title", "", "Mehanata");
 	const img = elementFactory("img", content, "pic", "", "", "imgs/restaurant.jpg");
 	const description = elementFactory(
 		"p",
 		content,
 		"description",
 		"",
-		"The best restaurant.(I believe the title convinced you enough.)"
+		"A traditional Bulgarian restaurant."
 	);
 
 	const createPage = function () {

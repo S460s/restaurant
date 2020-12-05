@@ -1,6 +1,7 @@
+import { elementFactory } from "./elementFactory";
 import { homepage } from "./homepage";
 import { menu } from "./menu";
-import { elementFactory } from "./elementFactory";
+import { contacts } from "./contacts";
 
 const domManipulation = (function () {
 	const content = document.getElementById("content");
@@ -14,11 +15,11 @@ const domManipulation = (function () {
 			content.removeChild(content.lastChild);
 		}
 		if (e.target.id === "menuTab") {
-			content.style.cssText = "flex-flow: row wrap;";
 			menu.createPage();
 		} else if (e.target.id === "homeTab") {
-			content.style.cssText = "flex-flow: column wrap;";
 			homepage.createPage();
+		} else if (e.target.id === "contactTab") {
+			contacts.createPage();
 		}
 	};
 

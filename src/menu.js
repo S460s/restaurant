@@ -1,8 +1,9 @@
 import { elementFactory } from "./elementFactory";
-
 const content = document.getElementById("content");
+const foodCardWrapper = elementFactory("div", content, "foodCardWrapper");
+
 const foodFactory = function (sorc, name, desc) {
-	const foodCard = elementFactory("div", content, "card");
+	const foodCard = elementFactory("div", foodCardWrapper.name, "card");
 	const foodName = elementFactory("h3", foodCard.name, "foodTitle", "", name);
 	const pic = elementFactory("img", foodCard.name, "foodPic", "", "", sorc);
 	const description = elementFactory("p", foodCard.name, "foodDesc", "", desc);
@@ -18,6 +19,8 @@ const foodFactory = function (sorc, name, desc) {
 };
 
 const menu = (function () {
+	let menuTitle = elementFactory("h1", content, "title", "", "Menu");
+
 	let musaka = foodFactory(
 		"imgs/musaka.jpg",
 		"Musaka",
@@ -37,6 +40,8 @@ const menu = (function () {
 	);
 
 	const createPage = function () {
+		menuTitle.displayElement();
+		foodCardWrapper.displayElement();
 		musaka.displayCard();
 		shopskaSalata.displayCard();
 		lukanka.displayCard();
