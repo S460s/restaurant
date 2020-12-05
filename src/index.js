@@ -14,8 +14,10 @@ const domManipulation = (function () {
 			content.removeChild(content.lastChild);
 		}
 		if (e.target.id === "menuTab") {
+			content.style.cssText = "flex-flow: row wrap;";
 			menu.createPage();
 		} else if (e.target.id === "homeTab") {
+			content.style.cssText = "flex-flow: column wrap;";
 			homepage.createPage();
 		}
 	};
